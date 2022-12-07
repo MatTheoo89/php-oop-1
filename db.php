@@ -15,9 +15,10 @@ $Movie_3->setPoster('https://pad.mymovies.it/filmclub/2010/07/191/locandina.jpg'
 //var_dump($Movie_2);
 // var_dump($Movie_3);
 
-$movies = [$Movie_1, $Movie_2, $Movie_3];
+$moviesList = [$Movie_1, $Movie_2, $Movie_3];
 
-//var_dump($movies);
+//var_dump($moviesList[0]->cast);
+//var_dump($moviesList[0]->cast->actor_1);
 
 
 // header('content-Type: applications/json');

@@ -21,21 +21,25 @@
 </head>
 <body>
     <div class="container d-flex">
-        <?php foreach ($movies as $movie) :?>
+        <?php foreach ($moviesList as $movie) :?>
         <div class="card m-2" style="width: 18rem;">
             <img src="<?php echo $movie->poster?>" class="card-img-top h-100" alt="<?php echo $movie->title?>">
             <div class="card-body">
                 <h5 class="card-title fw-bold"><?php echo $movie->title?></h5>
-                <span class="card-title"><?php echo $movie->genre?></span>
-                <span class="card-title d-block"><?php echo $movie->duration?></span>
-                <span class="card-title mb-3"><?php echo $movie->genre?></span>
+                <span class="card-title">Genere: <?php echo $movie->genre?></span>
+                <span class="card-title d-block">Durata: <?php echo $movie->duration?></span>
                 <h5 class="card-title">Cast:</h5>
-                <?php foreach($movies->cast as $actor) : ?>
-                <span class="card-title mb-3"><?php echo $actor?></span>
-                <?php endforeach;?>
             </div>
         </div>
         <?php endforeach;?>
     </div>
 </body>
 </html>
+
+
+<!--                     <span class="card-title mb-3"><?php echo $movie->cast->actor_1?></span>
+                    <span class="card-title mb-3"><?php echo $movie->cast->actor_2?></span>
+                    <span class="card-title mb-3"><?php echo $movie->cast->actor_3?></span>
+                    <span class="card-title mb-3"><?php echo $movie->cast->actor_4?></span>
+                    <span class="card-title mb-3"><?php echo $movie->cast->actor_5?></span>
+ -->

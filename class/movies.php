@@ -4,7 +4,7 @@
 
         public $poster;
         public $title;
-        public $actors;
+        public $cast;
         public $genre;
         public $duration;
 
@@ -14,11 +14,11 @@
          * @param String Genere film
          * @param String Durata film
          */
-        public function __construct($_title, $_genre, $_duration, Cast $_actors){
+        public function __construct($_title, $_genre, $_duration, Cast $_cast){
             $this->title = $_title;
             $this->genre = $_genre;
             $this->duraction = $_duration;
-            $this->actors = $_actors;
+            $this->cast = $_cast;
         }
 
 
