@@ -29,17 +29,19 @@
                 <span class="card-title">Genere: <?php echo $movie->genre?></span>
                 <span class="card-title d-block">Durata: <?php echo $movie->duration?></span>
                 <h5 class="card-title">Cast:</h5>
+                    <span class="card-title mb-3"><?php echo $movie->cast->actor_1->name ?></span>
+                    <span class="card-title mb-3"><?php echo $movie->cast->actor_1->role ?></span><br>
+                    <span class="card-title mb-3"><?php echo $movie->cast->actor_2->name?></span>
+                    <span class="card-title mb-3"><?php echo $movie->cast->actor_2->role?></span><br>
+                    <span class="card-title mb-3"><?php echo $movie->cast->actor_3->name?></span>
+                    <span class="card-title mb-3"><?php echo $movie->cast->actor_3->role?></span><br>
+                    <span class="card-title mb-3"><?php echo $movie->cast->actor_4->name?></span>
+                    <span class="card-title mb-3"><?php echo $movie->cast->actor_4->role?></span><br>
+                    <span class="card-title mb-3"><?php echo $movie->cast->actor_5->name?></span>
+                    <span class="card-title mb-3"><?php echo $movie->cast->actor_5->role?></span><br>
             </div>
         </div>
         <?php endforeach;?>
     </div>
 </body>
 </html>
-
-
-<!--                     <span class="card-title mb-3"><?php echo $movie->cast->actor_1?></span>
-                    <span class="card-title mb-3"><?php echo $movie->cast->actor_2?></span>
-                    <span class="card-title mb-3"><?php echo $movie->cast->actor_3?></span>
-                    <span class="card-title mb-3"><?php echo $movie->cast->actor_4?></span>
-                    <span class="card-title mb-3"><?php echo $movie->cast->actor_5?></span>
- -->
