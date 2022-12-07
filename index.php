@@ -1,26 +1,41 @@
-<!-- Oggi pomeriggio ripassate i primi concetti di classe, variabili e metodi d’istanza che abbiamo visto stamattina e create un file index.php in cui:
-    - è definita una classe ‘Movie’
-        => all’interno della classe sono dichiarate delle variabili d’istanza
-        => all’interno della classe è definito un costruttore
-        => all’interno della classe è definito almeno un metodo
-    - vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori delle relative proprietà -->
-<?php
-include './class/movies.php';
-include './class/cast.php';
-include './class/actor.php';
+<?php 
+    include 'db.php'
+?>
 
-$Movie_1 = new Movie('Batman Begins','Azione', '2h 20m', new Cast(new Actor('Christian Bale', 'Bruce Wayne'), new Actor('Michael Caine', 'Alfred'), new Actor('Ken Watanabe', 'Ra\'s Al Ghul'), new Actor('Liam Neeson', 'Ducard'), new Actor('Katie Holmes', 'Rachel Dawes')));
-$Movie_1->setPoster('https://pad.mymovies.it/filmclub/2004/08/003/locandina.jpg');
 
-$Movie_2 = new Movie('Il cavaliere oscuro','Azione', '2h 32m', new Cast(new Actor('Christian Bale', 'Bruce Wayne'), new Actor('Heath Ledger ', 'Joker'), new Actor('Aaron Eckhart ', 'Harvey Dent'), new Actor('Michael Caine', 'Alfred'), new Actor('Maggie Gyllenhaal', 'Rachel Dawes')));
-$Movie_2->setPoster('https://pad.mymovies.it/filmclub/2007/02/131/locandina.jpg');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css' integrity='sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==' crossorigin='anonymous'/>
+    <title>Movies</title>
 
-$Movie_3 = new Movie('Il cavaliere oscuro - Il ritorno','Azione', '2h 45m', new Cast(new Actor('Christian Bale', 'Bruce Wayne'), new Actor('Gary Oldman', 'Commissioner Gordon'), new Actor('Tom Hardy', 'Bane'), new Actor('Joseph Gordon-Levitt', 'Blake'), new Actor('Anne Hathaway', 'Selina')));
-
-// var_dump($Movie_1);
-//var_dump($Movie_2);
-// var_dump($Movie_3);
-
-$movies = [$Movie_1, $Movie_2, $Movie_3];
-
-var_dump($movies);
+    <style>
+        body{
+            color: #39f;
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container d-flex">
+        <?php foreach ($movies as $movie) :?>
+        <div class="card m-2" style="width: 18rem;">
+            <img src="<?php echo $movie->poster?>" class="card-img-top h-100" alt="<?php echo $movie->title?>">
+            <div class="card-body">
+                <h5 class="card-title fw-bold"><?php echo $movie->title?></h5>
+                <span class="card-title"><?php echo $movie->genre?></span>
+                <span class="card-title d-block"><?php echo $movie->duration?></span>
+                <span class="card-title mb-3"><?php echo $movie->genre?></span>
+                <h5 class="card-title">Cast:</h5>
+                <?php foreach($movies->cast as $actor) : ?>
+                <span class="card-title mb-3"><?php echo $actor?></span>
+                <?php endforeach;?>
+            </div>
+        </div>
+        <?php endforeach;?>
+    </div>
+</body>
+</html>
