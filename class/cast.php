@@ -15,9 +15,9 @@
         public function __construct( Actor $_actor_1, $_actor_2, $_actor_3, $_actor_4, $_actor_5)
         {
             $this->actor_1 = $_actor_1;
-            $this->actor_1 = $_actor_2;
-            $this->actor_1 = $_actor_3;
-            $this->actor_1 = $_actor_4;
-            $this->actor_1 = $_actor_5;
+            $this->actor_2 = $_actor_2;
+            $this->actor_3 = $_actor_3;
+            $this->actor_4 = $_actor_4;
+            $this->actor_5 = $_actor_5;
         }
     }
