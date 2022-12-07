@@ -14,7 +14,7 @@
          * @param String Genere film
          * @param String Durata film
          */
-        public function __construct($_title, $_genre, $_duration, Actors $_actors = null){
+        public function __construct($_title, $_genre, $_duration, Cast $_actors = null){
             $this->title = $_title;
             $this->genre = $_genre;
             $this->duraction = $_duration;

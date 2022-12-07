@@ -1,6 +1,6 @@
 <?php
     
-    class Actors{
+    class Cast{
 
         public $name;
         public $role;
